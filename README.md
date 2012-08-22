@@ -27,20 +27,20 @@ Required config values
 
 Example statsd config
 ---------------
-{
-port: 8125
-, mgmt_port: 8126
-, backends: ["backends/statsd-mysql-backend/lib/index.js"]
-, mysql: {
- host: "mysqlhost"
- , user: "user"
- , password: "password"
- , database: "statsd"
- , table: "statistics"
- , pattern: /user\.([\w-]+)\.([\d]+)/
- , pos_key: 1
- , pos_id: 2
-}
+{  
+port: 8125  
+, mgmt_port: 8126  
+, backends: ["backends/statsd-mysql-backend/lib/index.js"]  
+, mysql: {  
+ host: "mysqlhost"  
+ , user: "user"  
+ , password: "password"  
+ , database: "statsd"  
+ , table: "statistics"  
+ , pattern: /user\.([\w-]+)\.([\d]+)/  
+ , pos_key: 1  
+ , pos_id: 2  
+}  
 }
 
 [1]: https://github.com/etsy/statsd        "Etsy StatsD"
