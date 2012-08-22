@@ -20,10 +20,10 @@ Required config values
 * mysql.table
 * mysql.pattern
 ** Regular expression to match the counters that should be stored to mysql
-* mysql.pos_key
-** Match position for the key (usually 1 or 2)
-* mysql.pos_id
-** Match position for the id (usually 1 or 2)
+* mysql.pos_key  
+ Match position for the key (usually 1 or 2)
+* mysql.pos_id  
+ Match position for the id (usually 1 or 2)
 
 Example statsd config
 ---------------
