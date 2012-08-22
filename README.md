@@ -1,6 +1,8 @@
 statsd-mysql-backend
 ====================
 
+MySQL backend for the [Etsy StatsD] [1]  
+  
 Save statsd counters to a mysql key/value table.  
 Overwrite existing datasets with new counter values.
 
@@ -33,7 +35,10 @@ port: 8135
 , mysql_user: "user"  
 , mysql_password: "password"  
 , mysql_database: "statsd"  
+, mysql_table: "statistics"  
 , mysql_pattern: /user\.([\w-]+)\.([\d]+)/  
 , mysql_pos_key: 1  
 , mysql_pos_id: 2  
 }
+
+[1]: https://github.com/etsy/statsd        "Etsy StatsD"
