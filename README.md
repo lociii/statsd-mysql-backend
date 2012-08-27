@@ -27,6 +27,7 @@ Required config values
 
 Example statsd config
 -----------------------
+```javascript
 {  
 port: 8125  
 , mgmt_port: 8126  
@@ -42,9 +43,11 @@ port: 8125
  , pos_id: 2  
 }  
 }
+```
 
 MySQL Table format
 ----------------------
+```sql
 CREATE TABLE `statistic` (  
   `id` int(10) unsigned NOT NULL,  
   `type` varchar(100) NOT NULL,  
@@ -52,5 +55,6 @@ CREATE TABLE `statistic` (
   `value` int(10) NOT NULL,  
   PRIMARY KEY (`id`,`type`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  
+```
 
 [1]: https://github.com/etsy/statsd        "Etsy StatsD"
