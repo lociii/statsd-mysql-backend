@@ -1,14 +1,14 @@
 statsd-mysql-backend
 ====================
 
-MySQL backend for the [Etsy StatsD] [1]  
-  
-Save statsd counters to a mysql key/value table.  
+MySQL backend for the [Etsy StatsD] [1]
+
+Save statsd counters to a mysql key/value table.
 Overwrite existing datasets with new counter values.
 
 Vocabulary
 -----------
-ID means the namespace for a metric e.g. the id of a user  
+ID means the namespace for a metric e.g. the id of a user
 Key means the name of the metric e.g. how many messages has a user sent yet
 
 Required config values
@@ -26,7 +26,7 @@ Required config values
  Match position for the id (usually 1 or 2)
 
 Example statsd config
----------------
+-----------------------
 {  
 port: 8125  
 , mgmt_port: 8126  
@@ -42,5 +42,15 @@ port: 8125
  , pos_id: 2  
 }  
 }
+
+MySQL Table format
+----------------------
+CREATE TABLE `statistic` (  
+  `id` int(10) unsigned NOT NULL,  
+  `type` varchar(100) NOT NULL,  
+  `last_change` int(10) unsigned NOT NULL,  
+  `value` int(10) NOT NULL,  
+  PRIMARY KEY (`id`,`type`)  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;  
 
 [1]: https://github.com/etsy/statsd        "Etsy StatsD"
