@@ -2,7 +2,7 @@
   "author": "Jens Nistler <opensource@jensnistler.de>",
   "description": "A backend for StatsD to emit stats to mysql.",
   "name": "statsd-mysql-backend",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "dependencies": {
     "easy-mysql": ">=0.6.1"
